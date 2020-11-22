@@ -29,9 +29,10 @@ $(document).ready(function() {
 	$("#send_to_my_Study").click(sendLocaldatatoSite);
 	function sendLocaldatatoSite(){
 		var notes = JSON.parse(localStorage.mynotes);
+		var auth_key = localStorage.loginAuthKey;
 
 		$.each(notes, function(index, value) {
-			$.post("http://127.0.0.1:8000/onlinelearning/post-user-text",{'content':value.content,'texturls':value.texturls}, function(ret){
+			$.post("http://127.0.0.1:8000/onlinelearning/post-user-text",{'authkey':auth_key,'content':value.content,'texturls':value.texturls}, function(ret){
 				$('#result').html(ret.result)
 			})
 		});
