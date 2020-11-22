@@ -1,0 +1,15 @@
+#wrapper {
+	min-width: 600px;
+}
+
+.uuid {
+	display: none;
+}
+
+.content {
+	margin: 10px;
+}
+
+button {
+	margin: 10px;
+}
