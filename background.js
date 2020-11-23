@@ -24,7 +24,8 @@ chrome.contextMenus.create(createMenuProp);
 
 function noteIt(info, tab) {
 	var uuid = Math.uuid(16);
-	var note = new Note(info.selectionText,info.pageUrl);
+	var notenow = new Date();
+	var note = new Note(info.selectionText,info.pageUrl,notenow);
 	var object = JSON.parse(localStorage.mynotes);
 	object[uuid] = note;
 	localStorage.mynotes = JSON.stringify(object);
@@ -45,6 +46,7 @@ chrome.runtime.onMessage.addListener(function(request, sender, sendResponse)
 	localStorage.loginState = "logged";
 	localStorage.loginName = JSON.parse(request.loginUsername).username;
 	localStorage.loginAuthKey = JSON.parse(request.loginUsername).AuthenticationKey;
+
 	//console.log(request.loginUsername);
 	sendResponse('我是后台，我已收到你的消息：' + JSON.stringify(request));
 

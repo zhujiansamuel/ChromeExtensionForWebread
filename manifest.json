@@ -1,8 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "kyfxbl note",
+  "name": "LyDL note",
   "description": "This extension notes text content from page",
-  "version": "1.4",
+  "version": "1.0",
 
 
   //所以后端常驻脚本可以有多个？
@@ -14,7 +14,7 @@
   "browser_action": {
     "default_icon": "icon.png",
     "default_popup": "popup.html",
-    "default_title": "kyfxbl note"
+    "default_title": "LyDL note"
   },
 
   "icons":
@@ -39,10 +39,6 @@
   //限定只能在我自己的登陆页面上进行通信
   "externally_connectable": {
     "matches": ["http://127.0.0.1/validate/login-from-chrome"],
-    "ids": [
-      "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
-      "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
-    ]
   },
 
   // 普通页面能够直接访问的插件资源列表，如果不设置是无法直接访问的

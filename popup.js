@@ -32,7 +32,7 @@ $(document).ready(function() {
 		var auth_key = localStorage.loginAuthKey;
 
 		$.each(notes, function(index, value) {
-			$.post("http://127.0.0.1:8000/onlinelearning/post-user-text",{'authkey':auth_key,'content':value.content,'texturls':value.texturls}, function(ret){
+			$.post("http://127.0.0.1:8000/onlinelearning/post-user-text",{'authkey':auth_key,'content':value.content,'texturls':value.texturls,'notedate':value.notedate}, function(ret){
 				$('#result').html(ret.result)
 			})
 		});
