@@ -4,8 +4,6 @@
   "description": "This extension notes text content from page",
   "version": "1.0",
 
-
-  //所以后端常驻脚本可以有多个？
   "background": {
     "scripts": ["common.js","uuid.js","background.js"]
   },
@@ -19,7 +17,6 @@
 
   "icons":
   {
-    //16好像是右键菜单的图标，别的暂时不知道
     "16": "icon.png",
     "48": "icon.png",
     "128": "icon.png"
@@ -29,19 +26,15 @@
   "content_scripts":
     [{
       "matches": ["<all_urls>"],
-      // 多个JS按顺序注入
       "js": ["jquery-1.8.0.js", "content-script.js"],
-      // css注入，将来可能会使用到，暂时放在这里
       "css": ["custom.css"],
-      // 代码注入的时间，可选值： "document_start", "document_end", or "document_idle"，最后一个表示页面空闲时，默认document_idle
       "run_at": "document_start"
     }],
-  //限定只能在我自己的登陆页面上进行通信
+
   "externally_connectable": {
-    "matches": ["http://127.0.0.1/validate/login-from-chrome"],
+    "matches": ["http://127.0.0.1/validate/login-from-chrome"]
   },
 
-  // 普通页面能够直接访问的插件资源列表，如果不设置是无法直接访问的
   "web_accessible_resources": ["inject.js"],
 
 
@@ -54,11 +47,11 @@
     "tabs",
     "contextMenus",
     "http://*/*",
-    "notifications", // 通知
-    "webRequest", // web请求
-    "webRequestBlocking", // 阻塞式web请求
-    "storage", // 插件本地存储
-    "http://*/*", // 可以通过executeScript或者insertCSS访问的网站
-    "https://*/*" // 可以通过executeScript或者insertCSS访问的网站
+    "notifications",
+    "webRequest",
+    "webRequestBlocking",
+    "storage",
+    "http://*/*",
+    "https://*/*"
   ]
 }
