@@ -67,7 +67,7 @@ $(document).ready(function() {
 	}
 
 	function clearLocalStorage() {
-		localStorage.clear();
+		localStorage.removeItem('mynotes');
 		initLocalStorage();
 		renderNotes();
 	}

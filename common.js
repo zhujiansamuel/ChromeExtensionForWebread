@@ -9,7 +9,7 @@ function Note(content,texturls,notedate) {
 //-----------------------------------------------------
 function initLocalStorage() {
     if (null == localStorage.appName) {
-        localStorage.appName = "kynote";
+        localStorage.appName = "LyDL note";
     }
     if (null == localStorage.mynotes) {
         // localStorage doesn't support Array or Object!
