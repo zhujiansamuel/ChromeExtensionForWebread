@@ -36,6 +36,9 @@ $(document).ready(function() {
 				$('#result').html(ret.result)
 			})
 		});
+		localStorage.removeItem('mynotes');
+		initLocalStorage();
+
 	}
 });
 
