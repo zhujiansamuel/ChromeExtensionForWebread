@@ -2,6 +2,7 @@ function Note(content,texturls,notedate) {
     this.content = content;
     this.texturls = texturls;
     this.notedate = notedate;
+    this.notelanguage = notelanguage;
 }
 
 //-----------------------------------------------------

@@ -17,9 +17,8 @@ $(document).ready(function() {
 		});
 		localStorage.removeItem('mynotes');
 		initLocalStorage();
-
-
 	}
+
 
 
 	$("#btn_logout").click(() => {
@@ -28,10 +27,14 @@ $(document).ready(function() {
 		window.location.reload();
 	});
 
+
+
 	$('#login_from_chrome').click(() => {
 		chrome.tabs.create({url: 'http://127.0.0.1:8000/onlinelearning/login-from-chrome'});
 		//chrome.tabs.create({url: 'http://xs996486.xsrv.jp/for_test/index.cgi/validate/login-from-chrome'});
 	});
+
+
 
 	if(localStorage.loginState === "logged"){
 		console.log("logged state");
@@ -64,7 +67,6 @@ $(document).ready(function() {
 $(document).ready(function() {
 	$("#btn_clear").click(clearLocalStorage);
 	renderNotes();
-
 
 	function renderNotes() {
 	$("#wrapper").empty();// 先清空页面
