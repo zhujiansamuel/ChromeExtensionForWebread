@@ -1,4 +1,4 @@
-function Note(content,texturls,notedate) {
+function Note(content,texturls,notedate,notelanguage) {
     this.content = content;
     this.texturls = texturls;
     this.notedate = notedate;
