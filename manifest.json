@@ -34,7 +34,6 @@
     "matches": ["http://127.0.0.1/validate/login-from-chrome"]
   },
 
-  "web_accessible_resources": ["inject.js"],
 
 
 
