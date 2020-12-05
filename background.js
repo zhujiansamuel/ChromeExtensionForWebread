@@ -25,7 +25,7 @@ chrome.contextMenus.create(createMenuProp);
 function noteIt(info, tab) {
 	var uuid = Math.uuid(16);
 	var notenow = new Date();
-	var notelanguage = "en";
+	var notelanguage = "ja";
 	var note = new Note(info.selectionText,info.pageUrl,notenow,notelanguage,tab.title);
 	var object = JSON.parse(localStorage.mynotes);
 	object[uuid] = note;
