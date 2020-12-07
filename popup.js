@@ -79,6 +79,7 @@ $(document).ready(function() {
 		var $uuid = $("<span class='uuid'>" + index + "</span>");
 		var $button = $("<button>delete</button>");
 		var $stopdiv = $("</div>")
+
 		$button.click(deleteCurrentNote);
 		$div.append($content);
 		$div.append($uuid);
