@@ -38,7 +38,6 @@ $(document).ready(function() {
 
 
 	if(localStorage.loginState === "logged"){
-		console.log("logged state");
 		$("#login_from_chrome").hide();
 		$("#send_to_my_Study").show();
 		$("#btn_clear").show();
@@ -49,7 +48,6 @@ $(document).ready(function() {
 		document.getElementById('nameTextMessage').innerHTML=loginNames;
 	}
 	else{
-		console.log("i do not know");
 		$("#result").hide();
 		$("#send_to_my_Study").hide();
 		$("#login_from_chrome").show();
@@ -80,10 +78,12 @@ $(document).ready(function() {
 		var $content = $("<span class='content'>" + content + "</span>");
 		var $uuid = $("<span class='uuid'>" + index + "</span>");
 		var $button = $("<button>delete</button>");
+		var $stopdiv = $("</div>")
 		$button.click(deleteCurrentNote);
 		$div.append($content);
 		$div.append($uuid);
 		$div.append($button);
+		$div.append($stopdiv);
 		$("#wrapper").append($div);
 	});
 }
