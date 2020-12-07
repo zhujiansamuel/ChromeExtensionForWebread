@@ -43,12 +43,14 @@ $(document).ready(function() {
 		$("#send_to_my_Study").show();
 		$("#btn_clear").show();
 		$("#btn_logout").show();
+		$("#result").show();
 		var loginNames = localStorage.loginName;
 		console.log(loginNames);
 		document.getElementById('nameTextMessage').innerHTML=loginNames;
 	}
 	else{
 		console.log("i do not know");
+		$("#result").hide();
 		$("#send_to_my_Study").hide();
 		$("#login_from_chrome").show();
 		$("#btn_clear").hide();
