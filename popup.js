@@ -11,7 +11,8 @@ $(document).ready(function() {
 		
 
 		$.each(notes, function(index, value) {
-			$.post("http://127.0.0.1:8000/onlinelearning/post-user-text",{'authkey':auth_key,'content':value.content,'texturls':value.texturls,'notedate':value.notedate,'notelanguage':value.notelanguage,'notetitle':value.notetabs}, function(ret){
+			
+			$.post("http://127.0.0.1:8000/ja/onlinelearning/post-user-text",{'authkey':auth_key,'content':value.content,'texturls':value.texturls,'notedate':value.notedate,'notelanguage':value.notelanguage,'notetitle':value.notetabs}, function(ret){
 				$('#result').html(ret.result);
 				window.location.reload();
 			})
@@ -38,6 +39,7 @@ $(document).ready(function() {
 
 
 	if(localStorage.loginState === "logged"){
+
 		$("#login_from_chrome").hide();
 		$("#send_to_my_Study").show();
 		$("#btn_clear").show();
