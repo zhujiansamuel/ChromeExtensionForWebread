@@ -21,8 +21,6 @@ $(document).ready(function() {
 		initLocalStorage();
 	}
 
-
-
 	$("#btn_logout").click(() => {
 		localStorage.clear();
 		initLocalStorage();
@@ -30,13 +28,10 @@ $(document).ready(function() {
 	});
 
 
-
 	$('#login_from_chrome').click(() => {
 		chrome.tabs.create({url: 'http://127.0.0.1:8000/onlinelearning/login-from-chrome'});
 		//chrome.tabs.create({url: 'http://xs996486.xsrv.jp/for_test/index.cgi/validate/login-from-chrome'});
 	});
-
-
 
 	if(localStorage.loginState === "logged"){
 
